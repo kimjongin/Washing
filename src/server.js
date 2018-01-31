@@ -25,7 +25,7 @@ app.get('/home/addMaching/', (req, res) => {
     sticker: 'smile',
   }).then(console.log)
 
-  var con = mysql.createConnection({
+  const con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
@@ -34,7 +34,8 @@ app.get('/home/addMaching/', (req, res) => {
   
   con.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!")
-  });
-
+    con.query("SELECT * FROM `user`", function (err, result) {
+      console.log(result)
+    })
+  })
 })
