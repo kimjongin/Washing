@@ -26,16 +26,17 @@ app.get('/home/addMaching/', (req, res) => {
     sticker: 'smile',
   }).then(console.log)
 
-  // var con = mysql.createConnection({
-  //   host: "localhost",
-  //   user: "root",
-  //   password: "",
-  //   database: "washingdb",
-  // })
+  const con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "washingdb",
+  })
   
-  // con.connect(function(err) {
-  //   if (err) throw err;
-  //   console.log("Connected!")
-  // });
-
+  con.connect(function(err) {
+    if (err) throw err;
+    con.query("SELECT * FROM `user`", function (err, result) {
+      console.log(result)
+    })
+  })
 })
