@@ -15,28 +15,20 @@ app.get('/home/', (req, res) => {
   
 })
 
+app.get('/home/machine/', (req, res) => {
+  res.sendFile(path.join(__dirname+'/Machine.html'))
+  
+})
+
+
 app.get('/home/addMaching/', (req, res) => {
   const tokenId = req.query.tokenId
   console.log(req.query)
   const notify = new LineAPI.Notify({
-    token: tokenId
+    token: 'iCUD740dyQeyufHnyI11NWNBXYOH8Qfi93LKVx9bqoe'
   })
   notify.send({
-    message: ' ปี้ป๊อป ผ้าซักเสร็จแล้วววจ้าาาาาาาาา',
+    message: 'ผ้าซักเสร็จแล้วววจ้าาาาาาาาา',
     sticker: 'smile',
-  }).then(console.log)
-
-  const con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "washingdb",
-  })
-  
-  con.connect(function(err) {
-    if (err) throw err;
-    con.query("SELECT * FROM `user`", function (err, result) {
-      console.log(result)
-    })
-  })
+  }).then(res.redirect('http://cdnqrcgde.s3-eu-west-1.amazonaws.com/wp-content/uploads/2013/11/jpeg.jpg'))
 })

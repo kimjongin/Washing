@@ -1,146 +1,287 @@
-<div class="container">
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Anton|Mitr|Rammetto+One" rel="stylesheet">
+	<style>
+		ul {
+  list-style-type: none;
+}
 
-    <form method="get" action="/home/addMaching/">
-        <div class="form-group">
-            <!-- <label >Line Token</label>
-							<input type="text" name="tokenId"class="form-control" id="idToken" placeholder="Line Token">
-						</div> -->
+li {
+  display: inline-block;
+}
 
-            <!-- <div class="input-group">
-							<div class="input-group-prepend ">
-								<span class=" btn btn-info " id="">TokenId</span>
-							</div>
-							<input type="text"  text="เริ่มต้นใช้งาน" name="tokenId" id="idToken" class="form-control" placeholder="Line Token" aria-label="" aria-describedby="basic-addon1">
-							
-						</div> -->
-            <br>
-            <div class="card-group">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb1" value="cd1" name="cd1" />
-                                <label for="cb1">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
 
-                                <center>
-                                    <button type="button" class="btn btn-outline-danger disabled">Danger</button>
-                                </center>
-                            </li>
 
-                        </ul>
-                        </center>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb2" value="cd2" name="cd2" />
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
 
-                                <label for="cb2">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: auto;
+  width: 100%;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+.hi {
+  background-image: url(https://githubuniverse.com/assets/img/universe/shapes/star-group-sm.svg);
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attach: fixed;
+  animation: animate-bg 50s infinite linear;
+  font-family: 'Rammetto One', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Mitr', sans-serif;
+  color: #fff;
+  
+}
+.user{
+    font-family: 'Mitr', sans-serif;
+  color: #fff; 
+}
+
+@keyframes animate-bg {
+  from { background-size: 100%; background-position: 0% 0%; }
+  50% { background-size: 120%; background-position: 0% 20% }
+  to { background-size: 100%; background-position: 0% 0%; }
+}
+	</style>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#"></a>
+                <p class="user">Hi' thohiroh &nbsp;&nbsp;
+                     <img src="https://image.flaticon.com/icons/svg/506/506931.svg" width="15%">10</p>
+				
+			</div>
+			
+		 </nav>
+
+		<div class="row hi" style="padding:10%">
+			<h1 class="display-1">Washing Machine</h1>
+        </div>
+        
+		<div class="container">
+			<form method="get" action="/home/addMaching/">
+    <div class="form-group">
+        <!-- <label >Line Token</label>
+                        <input type="text" name="tokenId"class="form-control" id="idToken" placeholder="Line Token">
+                    </div> -->
+
+        <!-- <div class="input-group">
+                        <div class="input-group-prepend ">
+                            <span class=" btn btn-info " id="">TokenId</span>
+                        </div>
+                        <input type="text"  text="เริ่มต้นใช้งาน" name="tokenId" id="idToken" class="form-control" placeholder="Line Token" aria-label="" aria-describedby="basic-addon1">
+                        
+                    </div> -->
+        <br>
+        <div class="card-group">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb1" value="cd1" name="cd1" disabled />
+                            <label for="cb1">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+
                             <center>
-                                <button type="button" class="btn btn-outline-success disabled">Success</button>
+                                <button type="button" class="btn btn-outline-danger disabled">Unavailable</button>
                             </center>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb3" value="cd3" name="cd3" />
-                                <label for="cb3">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
-                            <center>
-                                <button type="button" class="btn btn-outline-success disabled">Success</button>
-                            </center>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb4" value="cd4" name="cd4" />
-                                <label for="cb4">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
-                            <center>
-                                <button type="button" class="btn btn-outline-success disabled">Success</button>
-                            </center>
-                        </ul>
-                    </div>
+                        </li>
+
+                    </ul>
+                    </center>
                 </div>
             </div>
-            <br>
-            <div class="card-group">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb5" value="cd5" name="cd5" />
-                                <label for="cb5">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
-                            <center>
-                                <button type="button" class="btn btn-outline-success disabled">Success</button>
-                            </center>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb6" value="cd6" name="cd6" />
-                                <label for="cb6">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
-                            <center>
-                                <button type="button" class="btn btn-outline-success disabled">Success</button>
-                            </center>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb7" value="cd7" name="cd7" />
-                                <label for="cb7">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb2" value="cd2" name="cd2" />
 
-                        </ul>
-                    </div>
+                            <label for="cb2">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
+                        <center>
+                            <button type="button" class="btn btn-outline-success disabled">Available</button>
+                        </center>
+                    </ul>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb1" value="cd1" name="cd1" />
-                                <label for="cb1">
-                                    <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
-                                </label>
-                            </li>
-
-                        </ul>
-                    </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb3" value="cd3" name="cd3" />
+                            <label for="cb3">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
+                        <center>
+                            <button type="button" class="btn btn-outline-success disabled">Available</button>
+                        </center>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb4" value="cd4" name="cd4" />
+                            <label for="cb4">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
+                        <center>
+                            <button type="button" class="btn btn-outline-success disabled">Available</button>
+                        </center>
+                    </ul>
                 </div>
             </div>
         </div>
+        <br>
+        <div class="card-group">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb5" value="cd5" name="cd5" />
+                            <label for="cb5">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
+                        <center>
+                            <button type="button" class="btn btn-outline-success disabled">Available</button>
+                        </center>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb6" value="cd6" name="cd6" />
+                            <label for="cb6">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
+                        <center>
+                            <button type="button" class="btn btn-outline-success disabled">Available</button>
+                        </center>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb7" value="cd7" name="cd7" />
+                            <label for="cb7">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
 
-        <input type="submit" text="เริ่มต้นใช้งาน" class="btn btn-success"></input>
-    </form>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cb1" value="cd1" name="cd1" />
+                            <label for="cb1">
+                                <img src="https://image.flaticon.com/icons/svg/518/518973.svg" />
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" text="เริ่มต้นใช้งาน" class="btn btn-success" data-target="#myModal"></input>
+</form>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+          <img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22148%22%20height%3D%22148%22%20viewBox%3D%220%200%20148%20148%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aev%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2Fxml-events%22%3E%0A%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22148%22%20height%3D%22148%22%20fill%3D%22rgb(255%2C255%2C255)%22%20fill-opacity%3D%221.00%22%20%2F%3E%0A%3Cdefs%3E%3Crect%20id%3D%22p%22%20width%3D%224%22%20height%3D%224%22%20%2F%3E%3C%2Fdefs%3E%0A%3Cg%20fill%3D%22rgb(0%2C0%2C0)%22%20fill-opacity%3D%221.00%22%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2216%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2220%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2224%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2228%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2232%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2236%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2240%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2244%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2244%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2248%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2252%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2256%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2244%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2260%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2264%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2268%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2244%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2272%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2244%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2276%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2280%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2284%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2288%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2244%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%2292%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%2296%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%22100%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%22104%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%22108%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%22112%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22108%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22124%22%20y%3D%22116%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2256%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2288%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%22120%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2252%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2264%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2268%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2276%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2280%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2284%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22100%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22104%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22116%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%22124%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2216%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2220%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2224%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2228%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2232%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2236%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2240%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2248%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2260%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2272%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2292%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%2296%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22112%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22120%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3Cuse%20x%3D%22128%22%20y%3D%22128%22%20xlink%3Ahref%3D%22%23p%22%20%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E"
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
 </div>
+		</div>
+		 
+		<br>
+		<footer>
+			<center></center>
+		</footer>
+	</body>
+</html>
+
+
+
+
+
+
+
+ 
